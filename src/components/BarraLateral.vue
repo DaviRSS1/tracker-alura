@@ -36,6 +36,22 @@ export default defineComponent({
         <button class="button" @click="alterarTema">
             {{ textoBotao }}
         </button>
+        <nav class="panel mt-">
+            <ul>
+                <li>
+                    <router-link to="/" class="link">
+                        <i class="fas fa-tasks" ></i>
+                        tarefas
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/projetos" class="link">
+                        <i class="fas fa-project-diagram"></i>
+                        projetos
+                    </router-link>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
 
@@ -52,6 +68,19 @@ header {
     border: 1px solid var(--texto-primario);
     background-color: var(--bg-primario);
     color: var(--texto-primario);
+}
+
+.panel li {
+    margin: 8px 0;
+}
+.link {
+    color: #fff;
+}
+.link:hover {
+    color: #FAF0CA;
+}
+.link.router-link-active {
+    color: #FAF0CA;
 }
 
 @media only screen and (max-width: 768px) {
